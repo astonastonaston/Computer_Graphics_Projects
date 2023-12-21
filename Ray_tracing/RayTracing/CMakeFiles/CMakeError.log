@@ -1,0 +1,116 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/graphics/Desktop/HW6/rt/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7f56c/fast && /usr/bin/make -f CMakeFiles/cmTC_7f56c.dir/build.make CMakeFiles/cmTC_7f56c.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/HW6/rt/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7f56c.dir/src.c.o
+/usr/bin/cc   -fPIC -DCMAKE_HAVE_LIBC_PTHREAD -mavx2   -o CMakeFiles/cmTC_7f56c.dir/src.c.o   -c /home/graphics/Desktop/HW6/rt/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_7f56c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7f56c.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCMAKE_HAVE_LIBC_PTHREAD -mavx2    -rdynamic CMakeFiles/cmTC_7f56c.dir/src.c.o  -o cmTC_7f56c 
+/usr/bin/ld: CMakeFiles/cmTC_7f56c.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_7f56c.dir/build.make:87: cmTC_7f56c] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/HW6/rt/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_7f56c/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/graphics/Desktop/HW6/rt/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_226ca/fast && /usr/bin/make -f CMakeFiles/cmTC_226ca.dir/build.make CMakeFiles/cmTC_226ca.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/HW6/rt/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_226ca.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -mavx2   -o CMakeFiles/cmTC_226ca.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_226ca
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_226ca.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -mavx2    -rdynamic CMakeFiles/cmTC_226ca.dir/CheckFunctionExists.c.o  -o cmTC_226ca  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_226ca.dir/build.make:87: cmTC_226ca] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/HW6/rt/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_226ca/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/graphics/Desktop/HW6/RayTracing/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_38bb2/fast && /usr/bin/make -f CMakeFiles/cmTC_38bb2.dir/build.make CMakeFiles/cmTC_38bb2.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/HW6/RayTracing/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_38bb2.dir/src.c.o
+/usr/bin/cc   -fPIC -DCMAKE_HAVE_LIBC_PTHREAD -mavx2   -o CMakeFiles/cmTC_38bb2.dir/src.c.o   -c /home/graphics/Desktop/HW6/RayTracing/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_38bb2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38bb2.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCMAKE_HAVE_LIBC_PTHREAD -mavx2    -rdynamic CMakeFiles/cmTC_38bb2.dir/src.c.o  -o cmTC_38bb2 
+/usr/bin/ld: CMakeFiles/cmTC_38bb2.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_38bb2.dir/build.make:87: cmTC_38bb2] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/HW6/RayTracing/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_38bb2/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/graphics/Desktop/HW6/RayTracing/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a090e/fast && /usr/bin/make -f CMakeFiles/cmTC_a090e.dir/build.make CMakeFiles/cmTC_a090e.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/HW6/RayTracing/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a090e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -mavx2   -o CMakeFiles/cmTC_a090e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a090e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a090e.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -mavx2    -rdynamic CMakeFiles/cmTC_a090e.dir/CheckFunctionExists.c.o  -o cmTC_a090e  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a090e.dir/build.make:87: cmTC_a090e] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/HW6/RayTracing/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a090e/fast] Error 2
+
+
+

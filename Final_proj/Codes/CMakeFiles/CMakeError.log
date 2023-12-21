@@ -1,0 +1,539 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6e9eb/fast && /usr/bin/make -f CMakeFiles/cmTC_6e9eb.dir/build.make CMakeFiles/cmTC_6e9eb.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6e9eb.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_6e9eb.dir/src.c.o   -c /home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6e9eb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e9eb.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_6e9eb.dir/src.c.o  -o cmTC_6e9eb 
+/usr/bin/ld: CMakeFiles/cmTC_6e9eb.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_6e9eb.dir/build.make:87: cmTC_6e9eb] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_6e9eb/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_16a7a/fast && /usr/bin/make -f CMakeFiles/cmTC_16a7a.dir/build.make CMakeFiles/cmTC_16a7a.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_16a7a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_16a7a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_16a7a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16a7a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_16a7a.dir/CheckFunctionExists.c.o  -o cmTC_16a7a  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_16a7a.dir/build.make:87: cmTC_16a7a] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_16a7a/fast] Error 2
+
+
+
+Determining if the function glXGetProcAddressEXT exists failed with the following output:
+Change Dir: /home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_72397/fast && /usr/bin/make -f CMakeFiles/cmTC_72397.dir/build.make CMakeFiles/cmTC_72397.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_72397.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTC_72397.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_72397
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72397.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    -rdynamic CMakeFiles/cmTC_72397.dir/CheckFunctionExists.c.o  -o cmTC_72397  /usr/lib/x86_64-linux-gnu/libGL.so 
+/usr/bin/ld: CMakeFiles/cmTC_72397.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `glXGetProcAddressEXT'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_72397.dir/build.make:88: cmTC_72397] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_72397/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_84c08/fast && /usr/bin/make -f CMakeFiles/cmTC_84c08.dir/build.make CMakeFiles/cmTC_84c08.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_84c08.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_84c08.dir/src.c.o   -c /home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_84c08
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84c08.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_84c08.dir/src.c.o  -o cmTC_84c08 
+/usr/bin/ld: CMakeFiles/cmTC_84c08.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_84c08.dir/build.make:87: cmTC_84c08] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_84c08/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_90024/fast && /usr/bin/make -f CMakeFiles/cmTC_90024.dir/build.make CMakeFiles/cmTC_90024.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_90024.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_90024.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_90024
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90024.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_90024.dir/CheckFunctionExists.c.o  -o cmTC_90024  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_90024.dir/build.make:87: cmTC_90024] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_90024/fast] Error 2
+
+
+
+Determining if the function glXGetProcAddressEXT exists failed with the following output:
+Change Dir: /home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8c6d7/fast && /usr/bin/make -f CMakeFiles/cmTC_8c6d7.dir/build.make CMakeFiles/cmTC_8c6d7.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8c6d7.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTC_8c6d7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8c6d7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c6d7.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    -rdynamic CMakeFiles/cmTC_8c6d7.dir/CheckFunctionExists.c.o  -o cmTC_8c6d7  /usr/lib/x86_64-linux-gnu/libGL.so 
+/usr/bin/ld: CMakeFiles/cmTC_8c6d7.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `glXGetProcAddressEXT'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_8c6d7.dir/build.make:88: cmTC_8c6d7] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_8c6d7/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bf4bc/fast && /usr/bin/make -f CMakeFiles/cmTC_bf4bc.dir/build.make CMakeFiles/cmTC_bf4bc.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bf4bc.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_bf4bc.dir/src.c.o   -c /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_bf4bc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf4bc.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_bf4bc.dir/src.c.o  -o cmTC_bf4bc 
+/usr/bin/ld: CMakeFiles/cmTC_bf4bc.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_bf4bc.dir/build.make:87: cmTC_bf4bc] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_bf4bc/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1c07e/fast && /usr/bin/make -f CMakeFiles/cmTC_1c07e.dir/build.make CMakeFiles/cmTC_1c07e.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1c07e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_1c07e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1c07e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c07e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_1c07e.dir/CheckFunctionExists.c.o  -o cmTC_1c07e  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_1c07e.dir/build.make:87: cmTC_1c07e] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_1c07e/fast] Error 2
+
+
+
+Determining if the function glXGetProcAddressEXT exists failed with the following output:
+Change Dir: /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_38264/fast && /usr/bin/make -f CMakeFiles/cmTC_38264.dir/build.make CMakeFiles/cmTC_38264.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_38264.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTC_38264.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_38264
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38264.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    -rdynamic CMakeFiles/cmTC_38264.dir/CheckFunctionExists.c.o  -o cmTC_38264  /usr/lib/x86_64-linux-gnu/libGL.so 
+/usr/bin/ld: CMakeFiles/cmTC_38264.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `glXGetProcAddressEXT'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_38264.dir/build.make:88: cmTC_38264] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_38264/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_af049/fast && /usr/bin/make -f CMakeFiles/cmTC_af049.dir/build.make CMakeFiles/cmTC_af049.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_af049.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_af049.dir/src.c.o   -c /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_af049
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af049.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_af049.dir/src.c.o  -o cmTC_af049 
+/usr/bin/ld: CMakeFiles/cmTC_af049.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_af049.dir/build.make:87: cmTC_af049] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_af049/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_da5f3/fast && /usr/bin/make -f CMakeFiles/cmTC_da5f3.dir/build.make CMakeFiles/cmTC_da5f3.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_da5f3.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_da5f3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_da5f3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_da5f3.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_da5f3.dir/CheckFunctionExists.c.o  -o cmTC_da5f3  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_da5f3.dir/build.make:87: cmTC_da5f3] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_da5f3/fast] Error 2
+
+
+
+Determining if the function glXGetProcAddressEXT exists failed with the following output:
+Change Dir: /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_04851/fast && /usr/bin/make -f CMakeFiles/cmTC_04851.dir/build.make CMakeFiles/cmTC_04851.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_04851.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTC_04851.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_04851
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04851.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    -rdynamic CMakeFiles/cmTC_04851.dir/CheckFunctionExists.c.o  -o cmTC_04851  /usr/lib/x86_64-linux-gnu/libGL.so 
+/usr/bin/ld: CMakeFiles/cmTC_04851.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `glXGetProcAddressEXT'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_04851.dir/build.make:88: cmTC_04851] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_04851/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1ff08/fast && /usr/bin/make -f CMakeFiles/cmTC_1ff08.dir/build.make CMakeFiles/cmTC_1ff08.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1ff08.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_1ff08.dir/src.c.o   -c /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_1ff08
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ff08.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_1ff08.dir/src.c.o  -o cmTC_1ff08 
+/usr/bin/ld: CMakeFiles/cmTC_1ff08.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_1ff08.dir/build.make:87: cmTC_1ff08] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_1ff08/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_81e52/fast && /usr/bin/make -f CMakeFiles/cmTC_81e52.dir/build.make CMakeFiles/cmTC_81e52.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_81e52.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_81e52.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_81e52
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_81e52.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_81e52.dir/CheckFunctionExists.c.o  -o cmTC_81e52  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_81e52.dir/build.make:87: cmTC_81e52] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_81e52/fast] Error 2
+
+
+
+Determining if the function glXGetProcAddressEXT exists failed with the following output:
+Change Dir: /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3b0c8/fast && /usr/bin/make -f CMakeFiles/cmTC_3b0c8.dir/build.make CMakeFiles/cmTC_3b0c8.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3b0c8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTC_3b0c8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3b0c8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b0c8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    -rdynamic CMakeFiles/cmTC_3b0c8.dir/CheckFunctionExists.c.o  -o cmTC_3b0c8  /usr/lib/x86_64-linux-gnu/libGL.so 
+/usr/bin/ld: CMakeFiles/cmTC_3b0c8.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `glXGetProcAddressEXT'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_3b0c8.dir/build.make:88: cmTC_3b0c8] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_3b0c8/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d73c2/fast && /usr/bin/make -f CMakeFiles/cmTC_d73c2.dir/build.make CMakeFiles/cmTC_d73c2.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d73c2.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_d73c2.dir/src.c.o   -c /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d73c2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d73c2.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_d73c2.dir/src.c.o  -o cmTC_d73c2 
+/usr/bin/ld: CMakeFiles/cmTC_d73c2.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_d73c2.dir/build.make:87: cmTC_d73c2] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_d73c2/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d8466/fast && /usr/bin/make -f CMakeFiles/cmTC_d8466.dir/build.make CMakeFiles/cmTC_d8466.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d8466.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d8466.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d8466
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8466.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_d8466.dir/CheckFunctionExists.c.o  -o cmTC_d8466  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_d8466.dir/build.make:87: cmTC_d8466] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_d8466/fast] Error 2
+
+
+
+Determining if the function glXGetProcAddressEXT exists failed with the following output:
+Change Dir: /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_25e2f/fast && /usr/bin/make -f CMakeFiles/cmTC_25e2f.dir/build.make CMakeFiles/cmTC_25e2f.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_25e2f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTC_25e2f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_25e2f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25e2f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    -rdynamic CMakeFiles/cmTC_25e2f.dir/CheckFunctionExists.c.o  -o cmTC_25e2f  /usr/lib/x86_64-linux-gnu/libGL.so 
+/usr/bin/ld: CMakeFiles/cmTC_25e2f.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `glXGetProcAddressEXT'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_25e2f.dir/build.make:88: cmTC_25e2f] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_25e2f/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e1517/fast && /usr/bin/make -f CMakeFiles/cmTC_e1517.dir/build.make CMakeFiles/cmTC_e1517.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e1517.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e1517.dir/src.c.o   -c /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e1517
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1517.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_e1517.dir/src.c.o  -o cmTC_e1517 
+/usr/bin/ld: CMakeFiles/cmTC_e1517.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e1517.dir/build.make:87: cmTC_e1517] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_e1517/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_128cb/fast && /usr/bin/make -f CMakeFiles/cmTC_128cb.dir/build.make CMakeFiles/cmTC_128cb.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_128cb.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_128cb.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_128cb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_128cb.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_128cb.dir/CheckFunctionExists.c.o  -o cmTC_128cb  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_128cb.dir/build.make:87: cmTC_128cb] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_128cb/fast] Error 2
+
+
+
+Determining if the function glXGetProcAddressEXT exists failed with the following output:
+Change Dir: /home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ca11f/fast && /usr/bin/make -f CMakeFiles/cmTC_ca11f.dir/build.make CMakeFiles/cmTC_ca11f.dir/build
+make[1]: Entering directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ca11f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTC_ca11f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ca11f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca11f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    -rdynamic CMakeFiles/cmTC_ca11f.dir/CheckFunctionExists.c.o  -o cmTC_ca11f  /usr/lib/x86_64-linux-gnu/libGL.so 
+/usr/bin/ld: CMakeFiles/cmTC_ca11f.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `glXGetProcAddressEXT'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_ca11f.dir/build.make:88: cmTC_ca11f] Error 1
+make[1]: Leaving directory '/home/graphics/Desktop/119010344_HW5/Assignment5/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_ca11f/fast] Error 2
+
+
+
